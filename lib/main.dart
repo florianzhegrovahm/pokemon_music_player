@@ -21,7 +21,7 @@ Future<void> main() async {
     builder: () => SongHandler(),
     config: const AudioServiceConfig(
       androidNotificationChannelId: 'com.pokemon_music_player.app',
-      androidNotificationChannelName: 'pokemon_music_player Player',
+      androidNotificationChannelName: 'Pokemon Music Player',
       androidNotificationOngoing: true,
       androidShowNotificationBadge: true,
     ),

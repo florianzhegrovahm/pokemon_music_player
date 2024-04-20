@@ -10,7 +10,7 @@ class SongItem extends StatelessWidget {
   final bool isPlaying;
   final Uri? art;
   final String title;
-  final String? artist;
+  final String? album;
   final int id;
   final VoidCallback onSongTap;
 
@@ -19,7 +19,7 @@ class SongItem extends StatelessWidget {
     super.key,
     required this.isPlaying,
     required this.title,
-    required this.artist,
+    required this.album,
     required this.onSongTap,
     required this.id,
     this.searchedWord,
@@ -66,16 +66,16 @@ class SongItem extends StatelessWidget {
 
   // Build the subtitle widget with optional search word formatting
   Text? _buildSubtitle(BuildContext context) {
-    return artist == null
+    return album == null
         ? null
         : searchedWord != null
             ? formattedText(
-                corpus: artist!,
+                corpus: album!,
                 searchedWord: searchedWord!,
                 context: context,
               )
             : Text(
-                artist!,
+                album!,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               );

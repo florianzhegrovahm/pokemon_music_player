@@ -24,18 +24,18 @@ class _SearchScreenState extends State<SearchScreen> {
   // Function to search for songs based on the input value
   void _search({required String value, required List<MediaItem> songs}) {
     for (var song in songs) {
-      // Check if the title or artist of the song contains the search value
+      // Check if the title or album of the song contains the search value
       bool containsTitle = song.title
           .toLowerCase()
           .replaceAll(" ", "")
           .contains(value.toLowerCase().replaceAll(" ", ""));
-      bool containsArtist = song.artist!
+      bool containsAlbum = song.album!
           .toLowerCase()
           .replaceAll(" ", "")
           .contains(value.toLowerCase().replaceAll(" ", ""));
 
       // If the song matches the search criteria and is not already in the result list, add it
-      if (containsTitle || containsArtist) {
+      if (containsTitle || containsAlbum) {
         bool contains = _result.any((element) => element.id == song.id);
         if (!contains) {
           setState(() {
@@ -168,7 +168,7 @@ class _SearchScreenState extends State<SearchScreen> {
           id: int.parse(song.displayDescription!),
           isPlaying: song == playingSong,
           title: formattedTitle(song.title),
-          artist: song.artist,
+          album: song.album,
           onSongTap: () async {
             // Skip to the selected song when tapped
             await widget.songHandler.skipToQueueItem(index);
@@ -193,7 +193,7 @@ class _SearchScreenState extends State<SearchScreen> {
       id: int.parse(song.displayDescription!),
       isPlaying: song == playingSong,
       title: formattedTitle(song.title),
-      artist: song.artist,
+      album: song.album,
       onSongTap: () async {
         // Skip to the selected song when tapped
         await widget.songHandler.skipToQueueItem(songIndex);

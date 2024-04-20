@@ -134,10 +134,10 @@ class PlayerDeck extends StatelessWidget {
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
       ),
-      subtitle: playingSong.artist == null
+      subtitle: playingSong.album == null
           ? null
           : Text(
-              isLast ? "" : playingSong.artist!,
+              isLast ? "" : playingSong.album!,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),

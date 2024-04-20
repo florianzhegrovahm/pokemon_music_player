@@ -17,7 +17,7 @@ class MyBottomNavigationBar extends StatelessWidget {
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.library_music),
+            icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
@@ -25,7 +25,7 @@ class MyBottomNavigationBar extends StatelessWidget {
             label: 'Suche',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.album),
+            icon: Icon(Icons.settings),
             label: 'Settings',
           ),
         ],

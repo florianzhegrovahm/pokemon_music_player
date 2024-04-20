@@ -26,8 +26,8 @@ Future<MediaItem> songToMediaItem(SongModel song) async {
       // Format the song title using the provided utility function
       title: formattedTitle(song.title).trim(),
 
-      // Set the artist, duration, and display description
-      artist: song.artist,
+      // Set the album, duration, and display description
+      album: song.album,
       duration: Duration(milliseconds: song.duration!),
       displayDescription: song.id.toString(),
     );
@@ -35,6 +35,6 @@ Future<MediaItem> songToMediaItem(SongModel song) async {
     // Handle any errors that occur during the process
     debugPrint('Error converting SongModel to MediaItem: $e');
     // Return a default or null MediaItem in case of an error
-    return const MediaItem(id: '', title: 'Error', artist: 'Unknown');
+    return const MediaItem(id: '', title: 'Error', album: 'Unknown');
   }
 }

@@ -67,7 +67,7 @@ class SongsList extends StatelessWidget {
           id: int.parse(song.displayDescription!),
           isPlaying: song == playingSong,
           title: formattedTitle(song.title),
-          artist: song.artist,
+          album: song.album,
           onSongTap: () async {
             await songHandler.skipToQueueItem(songs.length - 1);
           },
@@ -89,7 +89,7 @@ class SongsList extends StatelessWidget {
       id: int.parse(song.displayDescription!),
       isPlaying: song == playingSong,
       title: formattedTitle(song.title),
-      artist: song.artist,
+      album: song.album,
       onSongTap: () async {
         await songHandler.skipToQueueItem(songs.indexOf(song));
       },

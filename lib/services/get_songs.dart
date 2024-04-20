@@ -19,11 +19,24 @@ Future<List<MediaItem>> getSongs() async {
     // Query the device for song information using OnAudioQuery
     final List<SongModel> songModels = await onAudioQuery.querySongs();
 
+    const desiredPath = '/storage/emulated/0/PokéRadio/';
+    const filterSongLength = true;
+    const desiredSongLength = 30000;
+
     // Convert each SongModel to a MediaItem and add it to the list of songs
-    for (final SongModel songModel in songModels) {
-      final MediaItem song = await songToMediaItem(songModel);
-      songs.add(song);
-    }
+    songModels.where((songModel) => songModel.data
+      .startsWith(desiredPath))
+        .where((songModel) {
+          if (filterSongLength) {
+            return songModel.duration != null ? songModel.duration! >= desiredSongLength : true;
+          } else {
+            return true;
+          }
+      })
+      .forEach((songModel) async {
+        final MediaItem song = await songToMediaItem(songModel);
+        songs.add(song);
+    });
 
     // Return the list of songs
     return songs;
