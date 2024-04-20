@@ -1,4 +1,4 @@
-package com.example.dum
+package com.example.pokemon_music_player
 
 import io.flutter.embedding.android.FlutterActivity
 

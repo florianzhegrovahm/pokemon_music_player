@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:dum/services/uri_to_file.dart';
-import 'package:dum/utils/formatted_text.dart';
+import 'package:pokemon_music_player/services/uri_to_file.dart';
+import 'package:pokemon_music_player/utils/formatted_text.dart';
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 

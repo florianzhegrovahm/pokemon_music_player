@@ -1,7 +1,7 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:dum/services/song_handler.dart';
-import 'package:dum/ui/components/play_pause_button.dart';
-import 'package:dum/ui/components/song_progress.dart';
+import 'package:pokemon_music_player/services/song_handler.dart';
+import 'package:pokemon_music_player/ui/components/play_pause_button.dart';
+import 'package:pokemon_music_player/ui/components/song_progress.dart';
 import 'package:flutter/material.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 

@@ -1,6 +1,6 @@
 {
-    "name": "dum",
-    "short_name": "dum",
+    "name": "pokemon_music_player",
+    "short_name": "pokemon_music_player",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

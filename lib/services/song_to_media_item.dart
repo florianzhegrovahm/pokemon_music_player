@@ -1,6 +1,6 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:dum/services/get_song_art.dart';
-import 'package:dum/utils/formatted_title.dart';
+import 'package:pokemon_music_player/services/get_song_art.dart';
+import 'package:pokemon_music_player/utils/formatted_title.dart';
 import 'package:flutter/material.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 

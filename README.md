@@ -1,8 +1,8 @@
-# Dum - Flutter Music Player App
+# pokemon_music_player - Flutter Music Player App
 
-Dum is a sleek and intuitive music player application built with Flutter,
+pokemon_music_player is a sleek and intuitive music player application built with Flutter,
 designed to provide a seamless and enjoyable music listening experience. Whether
-you're a casual listener or a music enthusiast, Dum offers a feature-rich
+you're a casual listener or a music enthusiast, pokemon_music_player offers a feature-rich
 environment for managing and playing your favorite tunes.
 
 ## [View Video](https://youtu.be/_7CHcLhRh6E)

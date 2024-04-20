@@ -1,9 +1,9 @@
 // Import necessary packages and files
-import 'package:dum/notifiers/songs_provider.dart';
-import 'package:dum/services/song_handler.dart';
-import 'package:dum/ui/components/player_deck.dart';
-import 'package:dum/ui/components/songs_list.dart';
-import 'package:dum/ui/screens/search_screen.dart';
+import 'package:pokemon_music_player/notifiers/songs_provider.dart';
+import 'package:pokemon_music_player/services/song_handler.dart';
+import 'package:pokemon_music_player/ui/components/player_deck.dart';
+import 'package:pokemon_music_player/ui/components/songs_list.dart';
+import 'package:pokemon_music_player/ui/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // Scaffold widget for the app structure
           return Scaffold(
             appBar: AppBar(
-              title: const Text("Dum"),
+              title: const Text("pokemon_music_player"),
               actions: [
                 // IconButton to navigate to the SearchScreen
                 IconButton(

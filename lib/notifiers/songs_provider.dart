@@ -1,6 +1,6 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:dum/services/get_songs.dart';
-import 'package:dum/services/song_handler.dart';
+import 'package:pokemon_music_player/services/get_songs.dart';
+import 'package:pokemon_music_player/services/song_handler.dart';
 import 'package:flutter/material.dart';
 
 // Define a class for managing songs using ChangeNotifier

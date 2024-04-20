@@ -2,10 +2,10 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-import 'package:dum/services/song_handler.dart';
-import 'package:dum/ui/components/player_deck.dart';
-import 'package:dum/ui/components/song_item.dart';
-import 'package:dum/utils/formatted_title.dart';
+import 'package:pokemon_music_player/services/song_handler.dart';
+import 'package:pokemon_music_player/ui/components/player_deck.dart';
+import 'package:pokemon_music_player/ui/components/song_item.dart';
+import 'package:pokemon_music_player/utils/formatted_title.dart';
 
 // SongsList class to display a list of songs
 class SongsList extends StatelessWidget {

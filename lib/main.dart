@@ -1,6 +1,6 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:dum/notifiers/songs_provider.dart';
-import 'package:dum/services/song_handler.dart';
+import 'package:pokemon_music_player/notifiers/songs_provider.dart';
+import 'package:pokemon_music_player/services/song_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -21,8 +21,8 @@ Future<void> main() async {
   _songHandler = await AudioService.init(
     builder: () => SongHandler(),
     config: const AudioServiceConfig(
-      androidNotificationChannelId: 'com.dum.app',
-      androidNotificationChannelName: 'Dum Player',
+      androidNotificationChannelId: 'com.pokemon_music_player.app',
+      androidNotificationChannelName: 'pokemon_music_player Player',
       androidNotificationOngoing: true,
       androidShowNotificationBadge: true,
     ),
