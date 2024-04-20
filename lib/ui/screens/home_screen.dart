@@ -52,20 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // Scaffold widget for the app structure
           return Scaffold(
             appBar: AppBar(
-              title: const Text("pokemon_music_player"),
-              actions: [
-                // IconButton to navigate to the SearchScreen
-                IconButton(
-                  onPressed: () => Get.to(
-                    () => SearchScreen(songHandler: widget.songHandler),
-                    duration: const Duration(milliseconds: 700),
-                    transition: Transition.rightToLeft,
-                  ),
-                  icon: const Icon(
-                    Icons.search_rounded,
-                  ),
-                ),
-              ],
+              title: const Text("Home"),
             ),
             body: songsProvider.isLoading
                 ? _buildLoadingIndicator() // Display a loading indicator while songs are loading

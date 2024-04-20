@@ -20,6 +20,10 @@ class SongHandler extends BaseAudioHandler with QueueHandler, SeekHandler {
     });
   }
 
+  void dispose() {
+    audioPlayer.dispose();
+  }
+
   // Broadcast the current playback state based on the received PlaybackEvent
   void _broadcastState(PlaybackEvent event) {
     playbackState.add(playbackState.value.copyWith(

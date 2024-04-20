@@ -3,11 +3,10 @@ import 'package:pokemon_music_player/notifiers/songs_provider.dart';
 import 'package:pokemon_music_player/services/song_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pokemon_music_player/notifiers/theme_provider.dart';
+import 'package:pokemon_music_player/ui/screens/main_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:dynamic_color/dynamic_color.dart';
 import 'package:get/get.dart';
-
-import 'ui/screens/home_screen.dart';
 
 // Create a singleton instance of SongHandler
 SongHandler _songHandler = SongHandler();
@@ -32,9 +31,9 @@ Future<void> main() async {
   runApp(
     MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (context) => ThemeProvider()),
         // Provide the SongsProvider with the loaded songs and SongHandler
-        ChangeNotifierProvider(
-          create: (context) => SongsProvider()..loadSongs(_songHandler),
+        ChangeNotifierProvider(create: (context) => SongsProvider()..loadSongs(_songHandler),
         ),
       ],
       // Use the MainApp widget as the root of the application
@@ -53,23 +52,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Build the app using DynamicColorBuilder
-    return DynamicColorBuilder(
-      builder: (ColorScheme? light, ColorScheme? dark) {
-        return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          // Configure the theme with light and dark color schemes
-          // theme: ThemeData(
-          //   colorScheme: light,
-          //   useMaterial3: true,
-          // ),
-          darkTheme: ThemeData(
-            colorScheme: dark,
-            useMaterial3: true,
-          ),
-          // Set HomeScreen as the initial screen with the provided SongHandler
-          home: HomeScreen(songHandler: _songHandler),
-        );
-      },
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: Provider.of<ThemeProvider>(context).themeData,
+      // Set HomeScreen as the initial screen with the provided SongHandler
+      home: MainScreen(songHandler: _songHandler),
     );
   }
 }

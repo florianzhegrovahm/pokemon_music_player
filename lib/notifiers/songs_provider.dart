@@ -20,7 +20,7 @@ class SongsProvider extends ChangeNotifier {
   // Asynchronous method to load songs
   Future<void> loadSongs(SongHandler songHandler) async {
     try {
-      // Use the getSongs function to fetch the list of songs
+            // Use the getSongs function to fetch the list of songs
       _songs = await getSongs();
 
       // Initialize the song handler with the loaded songs
